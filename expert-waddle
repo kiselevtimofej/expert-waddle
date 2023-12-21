@@ -1,0 +1,7 @@
+        let shapesTranslator = ShapesTranslator(pointTouchSide: 0.1, translationStep: 0.01)
+        let gestureReducer = GestureReducer(shapesTranslator: shapesTranslator,
+case .selectElement(let element):
+            newState.selectedElement = element
+            
+        case .gesture(let action):
+            newState = gestureReducer.reduce(newState, action)
